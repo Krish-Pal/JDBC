@@ -1,0 +1,80 @@
+package in.sp.backend;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+
+@WebServlet("/regForm")
+public class RegisterServlet extends HttpServlet {
+
+    private static final String URL = "jdbc:mysql://localhost:3306/yt_demo";
+    private static final String USER = "root";
+    private static final String PASS = "root";
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        // Get form data
+        String name = req.getParameter("name1");
+        String email = req.getParameter("email1");
+        String password = req.getParameter("pass1");
+        String gender = req.getParameter("gender1");
+        String city = req.getParameter("city1");
+
+        // Validation
+        if (name == null || email == null || password == null ||
+            gender == null || city == null ||
+            name.isEmpty() || email.isEmpty() || password.isEmpty() || city.isEmpty()) {
+
+            req.setAttribute("msg", "All fields are required!");
+            req.setAttribute("color", "red");
+
+            RequestDispatcher rd = req.getRequestDispatcher("register.jsp");
+            rd.forward(req, resp);
+            return;
+        }
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            Connection con = DriverManager.getConnection(URL, USER, PASS);
+
+            String query = "INSERT INTO register(name,email,password,gender,city) VALUES (?,?,?,?,?)";
+
+            PreparedStatement ps = con.prepareStatement(query);
+
+            ps.setString(1, name);
+            ps.setString(2, email);
+            ps.setString(3, password); // ⚠️ later hash karna
+            ps.setString(4, gender);
+            ps.setString(5, city);
+
+            int result = ps.executeUpdate();
+
+            if (result > 0) {
+                req.setAttribute("msg", "User registered successfully!");
+                req.setAttribute("color", "green");
+            } else {
+                req.setAttribute("msg", "Registration failed!");
+                req.setAttribute("color", "red");
+            }
+
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            req.setAttribute("msg", "Something went wrong: " + e.getMessage());
+            req.setAttribute("color", "red");
+        }
+
+        RequestDispatcher rd = req.getRequestDispatcher("register.jsp");
+        rd.forward(req, resp);
+    }
+}

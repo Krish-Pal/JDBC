@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:ServletDemo1" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:ServletDemo2" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:ExpressionLanguageDemo" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:GetPostDemo" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:JspImplicitObject" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:WebXmlDemo" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:WebAppWithoutWebXml" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:jspImplicitObject" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:ScriptingTagDemo" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:RegisterLogin" serverId="Tomcat v11.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:jspDemo1" serverId="Tomcat v11.0 Server at localhost"/>
+</modules>

@@ -1,0 +1,15 @@
+package in.sp.backend;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class MyServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	    response.getWriter().println("I am in doGet() method for browser!!!");
+	    System.out.print("I am in doGet() method for browser!!!");
+	}
+}
