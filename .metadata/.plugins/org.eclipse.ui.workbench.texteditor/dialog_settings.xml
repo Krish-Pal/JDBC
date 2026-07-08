@@ -8,6 +8,8 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="firstName"/>
+			<item value="student"/>
 			<item value="admin"/>
 			<item value="user"/>
 			<item value="Using generated security password"/>
