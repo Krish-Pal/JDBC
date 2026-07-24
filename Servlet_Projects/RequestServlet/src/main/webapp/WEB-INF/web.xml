@@ -1,0 +1,28 @@
+
+<web-app>
+
+    <!-- Aapka pehle wala DemoServlet -->
+    <servlet>
+        <servlet-name>DemoServlet</servlet-name>
+        <servlet-class>DemoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DemoServlet</servlet-name>
+        <url-pattern>/demo</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- Aapka naya RequestServlet -->
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <!-- FIX: You MUST include the package name here -->
+        <servlet-class>com.codesquadz.RequestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/RequestServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>

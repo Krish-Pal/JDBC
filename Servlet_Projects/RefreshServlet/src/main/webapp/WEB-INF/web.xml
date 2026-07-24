@@ -1,0 +1,34 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>RefreshServlet</servlet-name>
+        <servlet-class>RefreshServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RefreshServlet</servlet-name>
+        <url-pattern>/refresh</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RefreshServlet1</servlet-name>
+        <servlet-class>RefreshServlet1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RefreshServlet1</servlet-name>
+        <url-pattern>/refresh1</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet>
+        <servlet-name>ExcelServlet</servlet-name>
+        <servlet-class>ExcelServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ExcelServlet</servlet-name>
+        <url-pattern>/excel</url-pattern>
+    </servlet-mapping>
+
+</web-app>

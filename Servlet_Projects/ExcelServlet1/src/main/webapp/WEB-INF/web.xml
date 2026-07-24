@@ -1,0 +1,58 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>Mp3Servlet</servlet-name>
+        <servlet-class>Mp3Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Mp3Servlet</servlet-name>
+        <url-pattern>/mp3</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ImageServlet1</servlet-name>
+        <servlet-class>ImageInsert</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ImageServlet1</servlet-name>
+        <url-pattern>/img</url-pattern>
+    </servlet-mapping>
+
+    
+    <servlet>
+        <servlet-name>pdfServlet</servlet-name>
+        <servlet-class>PDFServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>pdfServlet</servlet-name>
+        <url-pattern>/pdf</url-pattern>
+    </servlet-mapping>
+   
+ 
+    <servlet>
+        <servlet-name>ExcelServlet1</servlet-name>
+        <servlet-class>ExcelServlet1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ExcelServlet1</servlet-name>
+        <url-pattern>/excel</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>WordServlet</servlet-name>
+        <servlet-class>WordServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WordServlet</servlet-name>
+        <url-pattern>/word</url-pattern>
+    </servlet-mapping>
+    
+
+</web-app>

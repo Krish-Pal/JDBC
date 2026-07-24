@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+	
+	<display-name>ConfigServlet</display-name>
+	
+	<servlet>
+		<servlet-name>ConfigureServlet</servlet-name>
+		<servlet-class>ConfigServlet</servlet-class>
+		
+		<init-param>
+			<param-name>driver</param-name>
+			<!-- Yahan apne database ka sahi driver dalna. (Ye MySQL ka example hai) -->
+			<param-value>com.mysql.cj.jdbc.Driver</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>image</param-name>
+			<param-value>bealogo.gif</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<!-- Ye naam upar wale servlet-name se bilkul match kar raha hai -->
+		<servlet-name>ConfigureServlet</servlet-name>
+		<url-pattern>/config</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
